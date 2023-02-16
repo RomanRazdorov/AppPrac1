@@ -37,5 +37,36 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        Toast.makeText(MainActivity.this, "App Stopped", Toast.LENGTH_SHORT).show();
+        Log.w(TAG, "This app is stopped");
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        Toast.makeText(MainActivity.this, "App Destroyed", Toast.LENGTH_SHORT).show();
+        Log.e(TAG, "This app is destroyed");
+    }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        Toast.makeText(MainActivity.this, "App Created", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "This app is paused");
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        Toast.makeText(MainActivity.this, "App Resumed", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "This app is resumed");
+    }
 
 }
