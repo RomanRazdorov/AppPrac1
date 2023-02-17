@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause()
     {
         super.onPause();
-        Toast.makeText(MainActivity.this, "App Created", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "App Paused", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "This app is paused");
     }
 
